@@ -1,1 +1,379 @@
+/* ========================= */
+/* RESET */
+/* ========================= */
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:'Press Start 2P', cursive;
+
+overflow-x:hidden;
+
+background:#5ec9ff;
+
+}
+
+/* ========================= */
+/* PANTALLA INICIAL */
+/* ========================= */
+
+#inicio{
+
+height:100vh;
+
+width:100%;
+
+background:linear-gradient(
+to bottom,
+#69d8ff 0%,
+#87e4ff 45%,
+#b8f2ff 70%,
+#d5ffce 100%
+);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+/* ========================= */
+
+.cielo{
+
+width:100%;
+
+height:100%;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+position:relative;
+
+}
+
+/* ========================= */
+
+h1{
+
+font-size:28px;
+
+line-height:1.8;
+
+color:white;
+
+text-shadow:
+
+4px 4px #000;
+
+animation:flotar 3s infinite ease-in-out;
+
+z-index:5;
+
+}
+
+/* ========================= */
+
+.subtitulo{
+
+margin-top:30px;
+
+width:80%;
+
+font-size:12px;
+
+line-height:2;
+
+color:white;
+
+text-shadow:2px 2px black;
+
+}
+
+/* ========================= */
+
+#start{
+
+margin-top:45px;
+
+padding:18px 30px;
+
+font-size:15px;
+
+font-family:'Press Start 2P';
+
+border:none;
+
+cursor:pointer;
+
+background:#ffdd33;
+
+box-shadow:
+
+0 8px #d79b00;
+
+border-radius:8px;
+
+transition:.2s;
+
+}
+
+#start:hover{
+
+transform:translateY(4px);
+
+box-shadow:
+
+0 4px #d79b00;
+
+}
+
+/* ========================= */
+
+.scroll{
+
+margin-top:40px;
+
+font-size:10px;
+
+color:white;
+
+text-shadow:2px 2px black;
+
+animation:pulse 2s infinite;
+
+}
+
+/* ========================= */
+
+.nube{
+
+position:absolute;
+
+background:white;
+
+border-radius:50px;
+
+opacity:.95;
+
+}
+
+.nube::before{
+
+content:"";
+
+position:absolute;
+
+background:white;
+
+border-radius:50%;
+
+}
+
+.nube::after{
+
+content:"";
+
+position:absolute;
+
+background:white;
+
+border-radius:50%;
+
+}
+
+/* nube 1 */
+
+.nube1{
+
+width:130px;
+
+height:45px;
+
+top:80px;
+
+left:-180px;
+
+animation:nubes 40s linear infinite;
+
+}
+
+.nube1::before{
+
+width:50px;
+
+height:50px;
+
+left:18px;
+
+top:-22px;
+
+}
+
+.nube1::after{
+
+width:70px;
+
+height:70px;
+
+right:15px;
+
+top:-32px;
+
+}
+
+/* nube2 */
+
+.nube2{
+
+width:170px;
+
+height:55px;
+
+top:200px;
+
+right:-220px;
+
+animation:nubes2 52s linear infinite;
+
+}
+
+.nube2::before{
+
+width:60px;
+
+height:60px;
+
+left:22px;
+
+top:-30px;
+
+}
+
+.nube2::after{
+
+width:90px;
+
+height:90px;
+
+right:20px;
+
+top:-42px;
+
+}
+
+/* nube3 */
+
+.nube3{
+
+width:110px;
+
+height:40px;
+
+top:330px;
+
+left:-150px;
+
+animation:nubes 30s linear infinite;
+
+}
+
+.nube3::before{
+
+width:45px;
+
+height:45px;
+
+left:12px;
+
+top:-18px;
+
+}
+
+.nube3::after{
+
+width:60px;
+
+height:60px;
+
+right:10px;
+
+top:-25px;
+
+}
+
+/* ========================= */
+
+@keyframes nubes{
+
+from{
+
+transform:translateX(0);
+
+}
+
+to{
+
+transform:translateX(170vw);
+
+}
+
+}
+
+@keyframes nubes2{
+
+from{
+
+transform:translateX(0);
+
+}
+
+to{
+
+transform:translateX(-170vw);
+
+}
+
+}
+
+@keyframes flotar{
+
+50%{
+
+transform:translateY(-8px);
+
+}
+
+}
+
+@keyframes pulse{
+
+50%{
+
+opacity:.5;
+
+}
+
+}
